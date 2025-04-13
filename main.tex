@@ -1,0 +1,195 @@
+\documentclass[a4paper,12pt,oneside,openright]{book} %print on one side only ST
+%\documentclass[12pt,a4paper,twoside]{book}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                            Packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%packages for french (accents OK: p.ex. vous pouvez écrire directement ``possèdent'' à la place de ``poss\`edent'') ST
+\usepackage[frenchb]{babel} 
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%package for url
+\usepackage{url}
+%package for biblio
+\usepackage{natbib}
+
+
+
+%\usepackage[applemac]{inputenc}
+%\usepackage[T1]{fontenc}
+%\usepackage[francais]{babel}
+\usepackage{fancyhdr,titlesec,xlop} 
+\usepackage{amsfonts,amssymb,amsmath,amscd,relsize,array}
+\usepackage{graphicx,color,colortbl,textcomp,multicol,lastpage,answers,exscale,enumitem,framed,pifont,fancybox}
+\usepackage{pstricks,pstricks-add,pst-fill,pst-grad,pst-coil,pst-plot,pst-node,pst-eucl,multido,pst-func,pst-solides3d,pst-text} 
+\usepackage[normalem]{ulem}
+\usepackage{pst-fractal}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                             Fonts 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\usepackage[scaled]{helvet}
+%\renewcommand*\familydefault{\sfdefault} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                     Mise en page  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Indentation
+\parindent=0pt
+
+% Parametres verticaux
+\setlength{\paperheight}{29.7cm} 
+\setlength{\topmargin}{-2cm} 
+\setlength{\headheight}{0.7cm} 
+\setlength{\headsep}{0.7cm} 
+\setlength{\topskip}{0cm} 
+\setlength{\textheight}{25.5cm} 
+\setlength{\footskip}{1.4cm} 
+
+% Parametres  horizontaux
+\setlength{\paperwidth}{21cm} 
+\setlength{\oddsidemargin}{-0.2cm} 
+\setlength{\marginparwidth}{0cm}
+\setlength{\marginparsep}{0cm}
+\setlength{\textwidth}{17cm}
+
+%  Haut et bas de pages
+\pagestyle{fancy}
+\fancyhead{}
+\renewcommand{\chaptermark}[1]{\markboth{\textit{\thechapter.\ #1}}{}}
+\fancyhead[R]{\leftmark}
+%\fancyfoot[R]{\thepage}
+%\fancyfoot[L]{\textit{Nom Pr\'enom}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                     Document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                   Page de titre
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thispagestyle{empty}
+
+\vspace{6cm}
+\begin{center}
+\begin{Large}
+GYMNASE DE RENENS\\[20pt]
+TRAVAIL DE MATURIT\'E 2021
+\end{Large}
+
+\vspace{7cm}
+\begin{Huge}
+\textbf{Le Boson de Higgs, une introduction}
+\end{Huge}
+\end{center}
+
+\vspace{13.5cm}
+\begin{large}
+\begin{minipage}{6cm}
+R\'epondant  :\\
+M. Trombella
+\end{minipage}
+\hfill 
+\begin{minipage}{6cm}
+Auteur : \\
+M. Naiken
+\end{minipage}
+
+\vspace{1cm}
+Renens, 2021-2022
+\end{large}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                 Table des mati\`eres
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tableofcontents
+%compiler 2 fois
+\fancyhead[R]{\textit{Table des mati\`eres}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                               Introduction
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter*{Introduction} %intro sans numerotation ST
+\pagenumbering{arabic}
+\addcontentsline{toc}{chapter}{Introduction}
+\fancyhead[R]{\textit{Introduction}}
+
+Le boson de Higgs \cite{spie} %to cite ref in text ST
+, boson BEH (pour Brout, Engler et Higgs) ou aussi appelée particule de Dieu, qu'elle est donc cette chose ? Vous connaissez la mati\`ere sous les formes sur quotidien, mais vous-\^etes-vous d\'ej\`a demande, pourquoi les objets du quotidien poss\`edent une masse ? Vous devez savoir que de nombreuses personnes se sont pos\'e cette question, et apr\`es de nombreuses recherches et exp\'eriences, nous avons r\'eussi \`a trouver la r\'eponse. La cause r\'eside dans une particule que l'on appelle boson de Higgs en hommage \`a une des personnes qui a \'emis cette th\'eorie. Cette particule aurait un effet de filet et, par cons\'equence, celui de ralentir certains \'el\'ements (leptons, quarks) qui lui passeraient au travers, en leur donnant ainsi une masse.\\
+
+Pour mon travail de maturit\'e, j'expliquerai tout d'abord les bases de la physique \'el\'ementaire, puis je parlerai de mani\`ere plus d\'etaill\'ee du boson de Higgs, toujours en restant le plus compr\'ehensible possible \`a un public gymnasial. Je parlerai aussi de comment nous avions pu passer d'une simple th\'eorie des ann\'ees 1964 a la priorit\'e du CERN (Conseil Europ\'een pour la Recherche Nucl\'eaire). Enfin, je traiterai de l'importance de sa d\'ecouverte ainsi que de son impact sur la physique moderne et des questions qui l'entourent.\\
+
+Pour mon travail de maturit\'e, j'expliquerai tout d'abord les bases de la physique \'el\'ementaire, puis je parlerai de mani\`ere plus d\'etaill\'ee du boson de Higgs, toujours en restant le plus compr\'ehensible possible \`a un public gymnasial. Je parlerai aussi de comment nous avions pu passer d'une simple th\'eorie des ann\'ees 1964 a la priorit\'e du CERN (Conseil Europ\'een pour la Recherche Nucl\'eaire). Enfin, je traiterai de l'importance de sa d\'ecouverte ainsi que de son impact sur la physique moderne et des questions qui l'entourent. \\
+
+Mon TM reposera sur trois axes :\\
+-	Pr\'eparation du cours : Recherche bibliographique sur les aspects th\'eoriques qui seront abord\'es dans le cours ainsi que sur les notions didactiques indispensables pour la mise en \oe uvre de ce TM.\\
+
+-	Conception et planification du cours : 5 p\'eriodes seront d\'edicac\'ees \`a mon cours : 3 d'entre-elles seront des cours et 2 des TP. Dans les p\'eriodes de cours les \'el\`eves apprendront l'histoire / d\'ecouverte du boson de Higgs. Dans les p\'eriodes de TP ils apprendront \`a \'elaborer une hypoth\`ese concernant un \'ev\`enement observ\'e puis \`a v\'erifier celle-ci par une exp\'erience et enfin \`a d\'ecrire le ph\'enom\`ene a l'aide d'un mod\`ele physique. Globalement, le cours sera ax\'e sur la mise en \oe uvre directe de la m\'ethode scientifique ainsi que sur l'analyse des implications de cette m\'ethode dans le cadre de la physique moderne.\\
+
+-	Pr\'eparation du mat\'eriel de cours/TP et mise en \oe uvre du cours, cet aspect est base surtout sur de la didactique. Pour le cours, un polycopier sera distribu\'e aux \'el\`eves et pour le TP nous effectuerons l'exp\'erience bas\'ee sur le principe de la force d'Archim\`ede.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                               
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Recherche Th\'eoriques}
+\fancyhead[R]{\leftmark}
+
+    \section{Boson de Higgs}
+        \subsection{Modele Standard}
+Qu'est-ce que le modele standard ?
+Le modele standard est une theorie regroupant les particules elementaires composant l'univers. Les  particules  elementaires sont a la base de la matiere, des forces fondamentaux et ne peuvent etre divisees. Pour la matiere, c'est  un premier groupe qui est a la base de celui-ci, le groupe en question est nomme fermions, quant a ceux qui composent les forces, ils sont nommee,  bosons.Ceux-ci peuvent etre a leurs tours divisee en plusieurs categorie, les fermions peuvent etres divisee en quarks et leptons, quant aux bosons, quatre d'en eux font partie des bosons de jauge, puis il y a le boson de Higgs. Les bosons de jauge sont : le photon, le graviton, le boson z, les bosons w(w\up+,w\up-) et finalement le gluon. Ils servent respectivement a la force electromagnetique, gravitationelle, nucleaire faible(bosons w et z), et nucleaire forte.
+
+
+%            \begin{figure}[!h]
+%                \center
+%                \includegraphics[scale=0.3]{modele_standard.png}
+%                \caption{CERN,Le Modele standard, https://home.cern/fr/science/physics/standard-model, site mis a jour le 8 mars 2022, consulte le 8 mars 2022}
+%            \end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{modele_standard.png} %percent\textwidth (ex. 0.8\textwidth) to define image width with respect to text width ST
+\caption[Le Modèle Standard]{Le Modèle Standard de la physique des particules. Source : Daniel Dominguez/CERN, {\itshape Le Modèle Standard}. \url{https://home.cern/fr/science/physics/standard-model} (8 mars 2022).}
+\label{fig:ms}
+\end{figure}
+
+        \subsection{Theorie}
+            En 1980, le modele standard ne pouvait pas expliquer une chose tres important. Pour expliquer brievement, le photon et les bosons W,Z sont responsable de la force electromagetique et nucleaire faible, cependant ces forces necessitent que leurs masses soient nuls. Cela n'etant pas le cas, comme prouvee par l'experience de 1980 au CERN, quelque chose manquait. Robert Brout, Francois Englert et Peter Higgs (d'ou BEH), postulent en 1964, un mecanisme alors nomme <<brisure spontanee de symetrie>>, en d'autre terme c'est theorie qui dit que les boson W et Z possedent bel et bien une masse tandis que le photon non, ce mecanisme est du au fait qu'un element externe vient perturber le systeme. Le champs de Higgs developpe de l'energie dans un certain volume dans le vide creant ainsi une masse aux bosons W et Z. Cela peut etre appliquer non seulement pour les bosons W et Z mais aussi pour aussi par exemple les particules elementaire de la matiere. L'existence sur boson de Higgs sera confirmee en 2012 grace au LHC et Francois Englert et Peter Higgs se verront attribue un prix nobel de physique. 
+
+%\cite[Le champs de Higgs est comparable a un groupe de personnes dans une cocktail: lorsqu’une célébrité entre dans la salle, elle attire la foule ce qui lui confère une « masse » importante.][David J. Miller]%
+
+        \subsection{CERN}
+            Apres la seconde guerre mondiale, la science europeenne se voit obselete, c'est pourquoi Raoul Dautry, pierre Auger et Lew Kowarski fonde en france un laboratoire de physique atomique, dans le but de reduire le couts et de rassembler le plus de savoir possible. Le 9 decembre 1949, Lous de Broglie, presente la premiere proposition officielle de la creation d'un laboratoire europeen. En  juin 1950, le physicien Isidor  Rabi demande a  ce que l'UNESCO(Organisation des Nations unies pour l'education, la culture) une aide financiere pour la formation de laboratoire, et pour que les collaborations scientifique soient de plus en plus present. Finalement en decembre 1951, 11 pays signent un accord reconnaissant le CERN. Il evolura enormement, au long de son existence il y aura eu 5 accelerateur de particules, dont le LEP(large electron positron collider) qui a son epoque etait le plus grand accelerateur de particule avant de se faire detroner par le LHC(Large Hadron Collider) en 2008.\\
+            Le CERN a enormement de decouvertes, tels que par exemple pour citer quelques-un des plus connu : en 1989-1990, Tim Berners-Lee et Robert Cailleau developpe a la base pour des scientifiques, un systeme permettant d'echanger des informations instatanementl, la chambre proportionnelle multifilaire c'est en quelque sorte une chambre remplie d'un gaz noble et des fils sont disposee parallelement avec des cathodes et des anodes et cela permet de detecter la presence de particule, mais son haut fait le plus notable est surement identification en 2012 d'une particule permettant de completer le modele standard, une particule qui permet de donner en quelque sorte la masse, le boson de Higgs.
+            
+            
+            
+        \subsection{ATLAS,CMS}
+        ATLAS et CMS sont deux detecteurs issu du Grand collisionneur de hadrons, ils mesurent respectivement, 46 m de long, 25 m de haut 25 m de large, et 21 m de long, 15 m de large et 15 m de haut. Dans le LHC deux particules entre en collision, creant ainsi des debris donc de nouvelles particules, et par un effet "explosion", les dispersant dans plusieurs directions. Le but de ces deux detecteurs est de mesurer leurs impulsion et l'energie des particules en incurvant la trajectoire des particules.\\
+        
+        Les principaux buts d'ATLAS et CMS sont la recherche du boson de Higgs, les recherches sur les dimensions supplementaire a l'espace-temps , et finalement la composition de la matiere noire. 
+        Ce sont ces deux detecteurs qui ont permis de confirmer l'existence du boson de Higgs.
+        
+        \subsection{Demarche scientifique}
+        Qu'est-ce que la demarche scientifique ? La demarche scientifique est une marche a suivre/procedure qui s'applique dans les sciences dures. Il y a deux type de demarche scientifique, la premiere c'est, a partir d'une experience faire une theorie, et le seconde est a partir d'une theorie mettre en place une experience qui permettra de verifier la theorie. Une Theorie a ete faite, puis pour verifier cette theorie une experience a ete menee, en occurence, la theorie du boson(theorie) de Higgs a mene a la construction du LHC(experience), pour decouvrir finalement le boson de Higgs.
+        
+    \section{didactique de la physique}
+        \subsection{Mise en place de la structure du cours}
+
+%bibliography > to compile biblio : 1 pdflatex + 1 bibtex + 2 pdflatex ST
+\bibliographystyle{apalike}        
+\bibliography{biblio_KN}
+
+\end{document}
